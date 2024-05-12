@@ -1,10 +1,3 @@
-//
-//  StepTrackerApp.swift
-//  StepTracker
-//
-//  Created by MacService on 12.05.2024.
-//
-
 import SwiftUI
 
 @main

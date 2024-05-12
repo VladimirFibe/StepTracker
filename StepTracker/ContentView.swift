@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  StepTracker
-//
-//  Created by MacService on 12.05.2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
