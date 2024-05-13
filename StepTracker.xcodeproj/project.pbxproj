@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E88FB6402BF1E33500CB4BFE /* HealthDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88FB63F2BF1E33500CB4BFE /* HealthDetailList.swift */; };
 		E8B850762BF07008006C022C /* StepTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B850752BF07008006C022C /* StepTrackerApp.swift */; };
-		E8B850782BF07008006C022C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B850772BF07008006C022C /* ContentView.swift */; };
+		E8B850782BF07008006C022C /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B850772BF07008006C022C /* DashboardView.swift */; };
 		E8B8507A2BF07008006C022C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B850792BF07008006C022C /* Assets.xcassets */; };
 		E8B8507D2BF07008006C022C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B8507C2BF07008006C022C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E88FB63F2BF1E33500CB4BFE /* HealthDetailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDetailList.swift; sourceTree = "<group>"; };
 		E8B850722BF07008006C022C /* StepTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B850752BF07008006C022C /* StepTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTrackerApp.swift; sourceTree = "<group>"; };
-		E8B850772BF07008006C022C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E8B850772BF07008006C022C /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		E8B850792BF07008006C022C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8B8507C2BF07008006C022C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				E8B850752BF07008006C022C /* StepTrackerApp.swift */,
-				E8B850772BF07008006C022C /* ContentView.swift */,
+				E8B850772BF07008006C022C /* DashboardView.swift */,
+				E88FB63F2BF1E33500CB4BFE /* HealthDetailList.swift */,
 				E8B850792BF07008006C022C /* Assets.xcassets */,
 				E8B8507B2BF07008006C022C /* Preview Content */,
 			);
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8B850782BF07008006C022C /* ContentView.swift in Sources */,
+				E88FB6402BF1E33500CB4BFE /* HealthDetailList.swift in Sources */,
+				E8B850782BF07008006C022C /* DashboardView.swift in Sources */,
 				E8B850762BF07008006C022C /* StepTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

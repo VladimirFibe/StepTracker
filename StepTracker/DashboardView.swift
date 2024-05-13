@@ -9,12 +9,12 @@ enum HealthMetricContext: CaseIterable, Identifiable {
         case .weight: return "Weight"
         }
     }
-    
+    var isStep: Bool { self == .steps}
     var id: Self { self}
 }
-struct ContentView: View {
+struct DashboardView: View {
     @State private var selectedStat: HealthMetricContext = .steps
-    var isSteps: Bool { selectedStat == .steps }
+    var isSteps: Bool { selectedStat.isStep }
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -72,7 +72,7 @@ struct ContentView: View {
             .padding()
             .navigationTitle("Dashboard")
             .navigationDestination(for: HealthMetricContext.self) { metric in
-                Text(metric.title)
+                HealthDetailList(metric: metric)
             }
         }
         .tint(isSteps ? .indigo : .pink)
@@ -80,5 +80,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    DashboardView()
 }
