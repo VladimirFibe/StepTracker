@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E80E81252BF24B0B00237FAD /* HealthKitPermissionPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E81242BF24B0B00237FAD /* HealthKitPermissionPrimingView.swift */; };
 		E88FB6402BF1E33500CB4BFE /* HealthDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88FB63F2BF1E33500CB4BFE /* HealthDetailList.swift */; };
 		E8B850762BF07008006C022C /* StepTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B850752BF07008006C022C /* StepTrackerApp.swift */; };
 		E8B850782BF07008006C022C /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B850772BF07008006C022C /* DashboardView.swift */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		E80E81232BF24A0B00237FAD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E80E81242BF24B0B00237FAD /* HealthKitPermissionPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionPrimingView.swift; sourceTree = "<group>"; };
 		E88FB63F2BF1E33500CB4BFE /* HealthDetailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDetailList.swift; sourceTree = "<group>"; };
 		E8B850722BF07008006C022C /* StepTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B850752BF07008006C022C /* StepTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTrackerApp.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				E8B850752BF07008006C022C /* StepTrackerApp.swift */,
 				E8B850772BF07008006C022C /* DashboardView.swift */,
 				E88FB63F2BF1E33500CB4BFE /* HealthDetailList.swift */,
+				E80E81242BF24B0B00237FAD /* HealthKitPermissionPrimingView.swift */,
 				E8B850792BF07008006C022C /* Assets.xcassets */,
 				E8B8507B2BF07008006C022C /* Preview Content */,
 			);
@@ -145,6 +148,7 @@
 				E88FB6402BF1E33500CB4BFE /* HealthDetailList.swift in Sources */,
 				E8B850782BF07008006C022C /* DashboardView.swift in Sources */,
 				E8B850762BF07008006C022C /* StepTrackerApp.swift in Sources */,
+				E80E81252BF24B0B00237FAD /* HealthKitPermissionPrimingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
