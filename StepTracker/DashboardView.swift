@@ -14,7 +14,6 @@ enum HealthMetricContext: CaseIterable, Identifiable {
 }
 struct DashboardView: View {
     @State private var selectedStat: HealthMetricContext = .steps
-    var isSteps: Bool { selectedStat.isStep }
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -71,11 +70,11 @@ struct DashboardView: View {
             }
             .padding()
             .navigationTitle("Dashboard")
-            .navigationDestination(for: HealthMetricContext.self) { metric in
-                HealthDetailList(metric: metric)
+            .navigationDestination(for: HealthMetricContext.self) {
+                HealthDetailList(metric: $0)
             }
         }
-        .tint(isSteps ? .indigo : .pink)
+        .tint(selectedStat.isStep ? .indigo : .pink)
     }
 }
 
