@@ -1,21 +1,43 @@
 import SwiftUI
 
+enum HealthMetricContext: CaseIterable, Identifiable {
+    case steps, weight
+    
+    var title: String {
+        switch self {
+        case .steps: return "Steps"
+        case .weight: return "Weight"
+        }
+    }
+    
+    var id: Self { self}
+}
 struct ContentView: View {
+    @State private var selectedStat: HealthMetricContext = .steps
+    var isSteps: Bool { selectedStat == .steps }
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
+                    Picker("Selected Stat", selection: $selectedStat) {
+                        ForEach(HealthMetricContext.allCases) {
+                            Text($0.title).tag($0)
+                        }
+                    }
+                    .pickerStyle(.segmented)
                     VStack(spacing: 20) {
                         HStack {
-                            VStack(alignment: .leading) {
-                                Label("Steps", systemImage: "figure.walk")
-                                    .font(.title3.bold())
-                                .foregroundStyle(.pink)
-                                Text("Avg: 10K Steps")
+                            NavigationLink(value: selectedStat) {
+                                VStack(alignment: .leading) {
+                                    Label("Steps", systemImage: "figure.walk")
+                                        .font(.title3.bold())
+                                        .foregroundStyle(.pink)
+                                    Text("Avg: 10K Steps")
+                                }
+                                Spacer()
+                                Image(systemName: "chevron.right")
                             }
-                            Spacer()
-                            Image(systemName: "chevron.right")
-                                .foregroundStyle(.secondary)
+                            .foregroundStyle(.secondary)
                         }
                         
                         RoundedRectangle(cornerRadius: 12)
@@ -25,17 +47,16 @@ struct ContentView: View {
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 12)
-                        .fill(Color(.secondarySystemBackground))
+                            .fill(Color(.secondarySystemBackground))
                     )
                     
                     VStack(alignment: .leading, spacing: 20) {
-                            VStack(alignment: .leading) {
-                                Label("Averages", systemImage: "calendar")
-                                    .font(.title3.bold())
+                        VStack(alignment: .leading) {
+                            Label("Averages", systemImage: "calendar")
+                                .font(.title3.bold())
                                 .foregroundStyle(.pink)
-                                Text("Last 28 days")
-                            }
-
+                            Text("Last 28 days")
+                        }
                         
                         RoundedRectangle(cornerRadius: 12)
                             .foregroundStyle(.secondary)
@@ -44,13 +65,17 @@ struct ContentView: View {
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 12)
-                        .fill(Color(.secondarySystemBackground))
+                            .fill(Color(.secondarySystemBackground))
                     )
                 }
             }
             .padding()
             .navigationTitle("Dashboard")
+            .navigationDestination(for: HealthMetricContext.self) { metric in
+                Text(metric.title)
+            }
         }
+        .tint(isSteps ? .indigo : .pink)
     }
 }
 
